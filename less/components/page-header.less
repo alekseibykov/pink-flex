@@ -38,7 +38,7 @@
     display: block;
     width: 50px;
     height: 24px;
-    background: url(../img/main-nav-menu-toggler.png);
+    background: url(../img/main-nav-menu-toggler.png) no-repeat;
 
     @media (min-height: @sm) {
       // display: none;
@@ -51,12 +51,12 @@
     background: url("../img/header-logo-1.png") no-repeat;
   }
 
-  & .promo {
+  .promo {
     color: #fff;
     text-align: center;
 
     .container {
-      height: 662px;
+      min-height: 662px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -72,7 +72,7 @@
     }
 
     &__hand {
-      text-align: center;
+      
       width: 320px;
       height: 285px;
       background: url(../img/download-hand-xs.png) no-repeat;
@@ -80,8 +80,7 @@
       @media (min-width: @sm) {
         order: 2;
         background: rgba(0,0,0,0);
-        width: 1050px;
-        height: 645px;
+        
       }
     }
 
@@ -108,13 +107,16 @@
 
     .download { 
       padding-top: 30px;
-      
       margin-right: -40px;
       margin-left: -40px;
       text-align: center;
       min-height: 271px;
       background: @darker-blue;
       color: #fff;
+      display: flex;
+      flex-direction: column;
+      padding-left: 30px;
+        padding-right: 30px;
       
       
       &__os-list {
@@ -164,8 +166,8 @@
         background: rgba(0,0,0,0);
         width: 50%;
         margin: 0 auto;
-        padding-left: 50px;
-        padding-right: 50px;
+        padding-left: 0px;
+        padding-right: 0px;
       }
     }
 
