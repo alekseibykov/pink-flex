@@ -14,6 +14,7 @@
     @media (min-width: @md) {
       display: inline-block;
       margin-top: 70px;
+      margin-bottom: 20px;
       fill: @grey;
     }
   }
@@ -24,7 +25,11 @@
 .reviews-slider {
   overflow: hidden;
   position: relative;
-  height: 350px;
+  min-height: 350px;
+
+  @media (min-width: @sm) {
+    min-height: 320px;     
+  }
 
   input {
     position: absolute;
@@ -33,10 +38,15 @@
 
   &__controls {
     position: absolute;
-    bottom: 48px;
-    width: 100px;
     left: 50%;
+    width: 100px;
     margin-left: -50px;
+    bottom: 46px;
+
+    @media (min-width: @sm) {
+      
+    }
+    
 
     label {
       display: inline-block;
@@ -46,21 +56,35 @@
       height: 6px;
       background: #bec2c7;
       border-radius: 50%;
-      border: 3px solid #283645;
+      vertical-align: middle;
+      margin-right: 16px;
     }
   }
 
   &__items {
-    overflow: hidden;
+    
+    max-width: 350px;
+    margin: 0 auto;
+    position: relative;
+
+    @media (min-width: @sm) {
+      max-width: 100%;
+    }
   }
 
   &__item {
+    
+    z-index: 100;
+    overflow: auto;
     display: flex;
     flex-direction: column;
     position: absolute;
-    left: 100%;
+    left: 300%;
     width: 100%;
     font-size: 14px;
+    
+
+
 
     h3 {
       order: -1;
@@ -76,6 +100,7 @@
 
     @media (min-width: @sm) {
       padding: 0;
+
       p {
         font-size: 18px;
       }
@@ -92,10 +117,29 @@
       }
       
     }
+
+    @media (min-width: @md) {
+      h3 {        
+        font-size: 24px;
+      }
+
+      h4 {
+        font-size: 18px;
+      }
+    }
   }
 
-  [id^="slider-trigger"]:checked + .reviews-slider__item {
+  #slider-trigger-1:checked ~ .reviews-slider__controls label[for="slider-trigger-1"],
+  #slider-trigger-2:checked ~ .reviews-slider__controls label[for="slider-trigger-2"],
+  #slider-trigger-3:checked ~ .reviews-slider__controls label[for="slider-trigger-3"] { 
+    background:#fff;
+    border: 3px solid #283645;
+  }
+
+  #slider-trigger-1:checked ~ .reviews-slider__items .reviews-slider__item:nth-child(1),
+  #slider-trigger-2:checked ~ .reviews-slider__items .reviews-slider__item:nth-child(2),
+  #slider-trigger-3:checked ~ .reviews-slider__items .reviews-slider__item:nth-child(3) { 
     left: 0;
-    transition: left .7s ease-out;
+    transition: left .7s;
   }
 }

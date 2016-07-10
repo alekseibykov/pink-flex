@@ -464,13 +464,19 @@ body {
   .reviews__quotes {
     display: inline-block;
     margin-top: 70px;
+    margin-bottom: 20px;
     fill: #f2f2f2;
   }
 }
 .reviews-slider {
   overflow: hidden;
   position: relative;
-  height: 350px;
+  min-height: 350px;
+}
+@media (min-width: 700px) {
+  .reviews-slider {
+    min-height: 320px;
+  }
 }
 .reviews-slider input {
   position: absolute;
@@ -478,10 +484,10 @@ body {
 }
 .reviews-slider__controls {
   position: absolute;
-  bottom: 48px;
-  width: 100px;
   left: 50%;
+  width: 100px;
   margin-left: -50px;
+  bottom: 46px;
 }
 .reviews-slider__controls label {
   display: inline-block;
@@ -491,12 +497,22 @@ body {
   height: 6px;
   background: #bec2c7;
   border-radius: 50%;
-  border: 3px solid #283645;
+  vertical-align: middle;
+  margin-right: 16px;
 }
 .reviews-slider__items {
-  overflow: hidden;
+  max-width: 350px;
+  margin: 0 auto;
+  position: relative;
+}
+@media (min-width: 700px) {
+  .reviews-slider__items {
+    max-width: 100%;
+  }
 }
 .reviews-slider__item {
+  z-index: 100;
+  overflow: auto;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -504,7 +520,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   position: absolute;
-  left: 100%;
+  left: 300%;
   width: 100%;
   font-size: 14px;
 }
@@ -539,9 +555,25 @@ body {
     display: inline-block;
   }
 }
-.reviews-slider [id^="slider-trigger"]:checked + .reviews-slider__item {
+@media (min-width: 1200px) {
+  .reviews-slider__item h3 {
+    font-size: 24px;
+  }
+  .reviews-slider__item h4 {
+    font-size: 18px;
+  }
+}
+.reviews-slider #slider-trigger-1:checked ~ .reviews-slider__controls label[for="slider-trigger-1"],
+.reviews-slider #slider-trigger-2:checked ~ .reviews-slider__controls label[for="slider-trigger-2"],
+.reviews-slider #slider-trigger-3:checked ~ .reviews-slider__controls label[for="slider-trigger-3"] {
+  background: #fff;
+  border: 3px solid #283645;
+}
+.reviews-slider #slider-trigger-1:checked ~ .reviews-slider__items .reviews-slider__item:nth-child(1),
+.reviews-slider #slider-trigger-2:checked ~ .reviews-slider__items .reviews-slider__item:nth-child(2),
+.reviews-slider #slider-trigger-3:checked ~ .reviews-slider__items .reviews-slider__item:nth-child(3) {
   left: 0;
-  transition: left 0.7s ease-out;
+  transition: left .7s;
 }
 
 /*# sourceMappingURL=styles.css.map */
