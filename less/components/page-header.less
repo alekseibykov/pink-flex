@@ -55,24 +55,23 @@
     color: #fff;
     text-align: center;
 
-    .container {
-      min-height: 662px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
+    
+    min-height: 662px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-      @media (min-width: @sm) {
-        height: 743px;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        background: url(../img/download-hand-sm.png) 100% 100% no-repeat;
-      }
+    @media (min-width: @sm) {
+      height: 743px;
+      align-items: flex-start;
+      justify-content: center;
+      flex-wrap: wrap;
+      background: url(../img/download-hand-sm.png) 70% 100% no-repeat;
+      
     }
 
     &__hand {
-      
       width: 320px;
       height: 285px;
       background: url(../img/download-hand-xs.png) no-repeat;
@@ -80,7 +79,6 @@
       @media (min-width: @sm) {
         order: 2;
         background: rgba(0,0,0,0);
-        
       }
     }
 
@@ -106,17 +104,18 @@
     }
 
     .download { 
+      // width: 100%;
+      z-index: 200;
       padding-top: 30px;
-      margin-right: -40px;
-      margin-left: -40px;
       text-align: center;
       min-height: 271px;
       background: @darker-blue;
       color: #fff;
       display: flex;
       flex-direction: column;
+      align-items: center;
       padding-left: 30px;
-        padding-right: 30px;
+      padding-right: 30px;
       
       
       &__os-list {
@@ -149,10 +148,11 @@
       
       &__options {
         margin-top: 15px;
+        
 
         @media (min-width: @sm) {
           padding: 30px 10px 0;
-          
+          max-width: 300px;
 
         }
       }
