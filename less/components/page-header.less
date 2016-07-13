@@ -13,7 +13,7 @@
   }
 
   @media(min-width: @md) {
-    background: @darker-blue url("../img/header-bg-lg.jpg") top center no-repeat;
+    background: @darker-blue url("../img/background-2x.jpg") top center no-repeat;
     background-size: cover;
   }
 
@@ -29,19 +29,28 @@
     justify-content: space-between;
     align-items: center;
 
+
     @media (min-width: @sm) {
       height: 110px;
     }
   }
 
-  &__toggler {
+  &__toggle {
     display: block;
+    order: 2;
     width: 50px;
     height: 24px;
-    background: url(../img/main-nav-menu-toggler.png) no-repeat;
+    background: url(../img/main-nav-menu-toggle.png) no-repeat;
+    cursor: pointer;
+    
 
-    @media (min-height: @sm) {
+    @media (min-width: @sm) {
       // display: none;
+    }
+
+    @media (min-width: @md) {
+      display: none;
+      
     }
   }
 
@@ -69,6 +78,10 @@
       flex-wrap: wrap;
       background: url(../img/download-hand-sm.png) 70% 100% no-repeat;
       
+    }
+
+    @media (min-width: @md) {
+      background: url(../img/download-hand-md.png) 70% 100% no-repeat;
     }
 
     &__hand {
@@ -105,7 +118,7 @@
 
     .download { 
       // width: 100%;
-      z-index: 200;
+      z-index: 100;
       padding-top: 30px;
       text-align: center;
       min-height: 271px;
@@ -184,4 +197,79 @@
   position: absolute;
   top: -400px;
   left: 0;
+
+  ul {
+    list-style-type: none;
+  }
+
+  @media (min-width: @sm) {
+
+  }
+
+  @media (min-width: @md) {
+    top: 0;
+    left: 45%;
+    width: 620px;
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+      padding: 43px 20px;
+
+      li {
+        a {
+          font-size: 18px;
+          line-height: 18px;
+          color: #fff;
+          font-weight: 400;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+#toggle-menu {
+  position: absolute;
+  opacity: 0;
+
+}
+
+#toggle-menu:checked ~ .main-nav {
+  top: 50px;
+  z-index: 101;
+
+  @media (min-width: @sm) {
+    top: 94px;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #283645;
+    padding-left: 0px;
+
+    
+
+    li {
+      width: 100%;
+      text-align: center;
+      display: block;
+      padding: 25px;
+      font-size: 30px;
+      border-bottom: 1px solid #000;
+      border-top: 1px solid #485461;
+
+      &:nth-child(1) {
+        border-top: none;
+      }
+
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+    }
+  }
 }

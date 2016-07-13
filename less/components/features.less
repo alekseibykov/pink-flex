@@ -69,9 +69,13 @@
 
   .features__item {
     font-size: 14px;
+
+    p {
+      color: #283645;
+    }
     
     img {
-      width: 157px;
+      width: auto;
       height: 320px;
     }
 
@@ -85,10 +89,20 @@
       }
 
       img {
-        width: 268px;
-        height: 480px;
+        width: 264px;
+        height: auto;
         margin-left: 40px;
 
+      }
+
+      @media (min-width: @md) {
+        h3 {
+          padding: 0 40px;
+        }
+
+        p {
+          padding: 0 36px;
+        }
       }
     }
 
@@ -107,7 +121,7 @@
 
       img {
         margin: 0;
-        width: 187px;
+        width: auto;
         height: 300px;
       }
         
@@ -186,5 +200,6 @@
 
   @media (min-width: @md) {
     background: @grey;
+    font-size: 18px;
   }
 }

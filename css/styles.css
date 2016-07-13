@@ -34,7 +34,7 @@ body {
 }
 @media (min-width: 700px) {
   .container {
-    max-width: 940px;
+    max-width: 1020px;
     padding: 0 40px;
     margin: 0 auto;
   }
@@ -68,7 +68,7 @@ body {
 }
 @media (min-width: 1200px) {
   .page-header {
-    background: #1d2631 url("../img/header-bg-lg.jpg") top center no-repeat;
+    background: #1d2631 url("../img/background-2x.jpg") top center no-repeat;
     background-size: cover;
   }
 }
@@ -94,11 +94,20 @@ body {
     height: 110px;
   }
 }
-.page-header__toggler {
+.page-header__toggle {
   display: block;
+  -webkit-order: 2;
+      -ms-flex-order: 2;
+          order: 2;
   width: 50px;
   height: 24px;
-  background: url(../img/main-nav-menu-toggler.png) no-repeat;
+  background: url(../img/main-nav-menu-toggle.png) no-repeat;
+  cursor: pointer;
+}
+@media (min-width: 1200px) {
+  .page-header__toggle {
+    display: none;
+  }
 }
 .page-header__logo-link {
   width: 74px;
@@ -137,6 +146,11 @@ body {
     background: url(../img/download-hand-sm.png) 70% 100% no-repeat;
   }
 }
+@media (min-width: 1200px) {
+  .page-header .promo {
+    background: url(../img/download-hand-md.png) 70% 100% no-repeat;
+  }
+}
 .page-header .promo__hand {
   width: 320px;
   height: 285px;
@@ -171,7 +185,7 @@ body {
   }
 }
 .page-header .promo .download {
-  z-index: 200;
+  z-index: 100;
   padding-top: 30px;
   text-align: center;
   min-height: 271px;
@@ -257,6 +271,75 @@ body {
   top: -400px;
   left: 0;
 }
+.main-nav ul {
+  list-style-type: none;
+}
+@media (min-width: 1200px) {
+  .main-nav {
+    top: 0;
+    left: 45%;
+    width: 620px;
+  }
+  .main-nav ul {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0;
+    padding: 43px 20px;
+  }
+  .main-nav ul li a {
+    font-size: 18px;
+    line-height: 18px;
+    color: #fff;
+    font-weight: 400;
+    text-decoration: none;
+  }
+}
+#toggle-menu {
+  position: absolute;
+  opacity: 0;
+}
+#toggle-menu:checked ~ .main-nav {
+  top: 50px;
+  z-index: 101;
+}
+@media (min-width: 700px) {
+  #toggle-menu:checked ~ .main-nav {
+    top: 94px;
+  }
+}
+#toggle-menu:checked ~ .main-nav ul {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #283645;
+  padding-left: 0px;
+}
+#toggle-menu:checked ~ .main-nav ul li {
+  width: 100%;
+  text-align: center;
+  display: block;
+  padding: 25px;
+  font-size: 30px;
+  border-bottom: 1px solid #000;
+  border-top: 1px solid #485461;
+}
+#toggle-menu:checked ~ .main-nav ul li:nth-child(1) {
+  border-top: none;
+}
+#toggle-menu:checked ~ .main-nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
 .features {
   background: #f2f2f2;
   text-align: center;
@@ -336,8 +419,11 @@ body {
 .features .features__item {
   font-size: 14px;
 }
+.features .features__item p {
+  color: #283645;
+}
 .features .features__item img {
-  width: 157px;
+  width: auto;
   height: 320px;
 }
 @media (min-width: 700px) {
@@ -350,9 +436,17 @@ body {
     font-size: 18px;
   }
   .features .features__item img {
-    width: 268px;
-    height: 480px;
+    width: 264px;
+    height: auto;
     margin-left: 40px;
+  }
+}
+@media (min-width: 700px) and (min-width: 1200px) {
+  .features .features__item h3 {
+    padding: 0 40px;
+  }
+  .features .features__item p {
+    padding: 0 36px;
   }
 }
 @media (min-width: 1200px) {
@@ -370,7 +464,7 @@ body {
   }
   .features .features__item img {
     margin: 0;
-    width: 187px;
+    width: auto;
     height: 300px;
   }
 }
@@ -449,6 +543,7 @@ body {
 @media (min-width: 1200px) {
   .research {
     background: #f2f2f2;
+    font-size: 18px;
   }
 }
 .reviews {
@@ -491,13 +586,13 @@ body {
 }
 .reviews-slider__controls label {
   display: inline-block;
-  box-sizing: content-box;
   cursor: pointer;
-  width: 6px;
-  height: 6px;
+  width: 12px;
+  height: 12px;
   background: #bec2c7;
   border-radius: 50%;
   vertical-align: middle;
+  border: 3px solid #fff;
   margin-right: 16px;
 }
 .reviews-slider__items {

@@ -20,24 +20,27 @@
     <div class="container">
       <div class="page-header__menu">
         <a class="page-header__logo-link" href="#"></a>
-        
+        <input id="toggle-menu" type="checkbox">
+        <label for="toggle-menu" class="page-header__toggle">
+          
+        </label>
         <nav id="menu" class="main-nav">
           <ul>
             <li>
-              <a class="main-nav__btn" href="#info">Информация</a>
+              <a class="main-nav-item" href="#info">Информация</a>
             </li>
             <li>
-              <a class="main-nav__btn" href="#features">Возможности</a>
+              <a class="main-nav-item" href="#features">Возможности</a>
             </li>
             <li>
-              <a class="main-nav__btn" href="#reviews">Отзывы</a>
+              <a class="main-nav-item" href="#reviews">Отзывы</a>
             </li>
             <li>
-              <a class="main-nav__btn" href="#price">Стоимость</a>
+              <a class="main-nav-item" href="#price">Стоимость</a>
             </li>
           </ul>
         </nav>
-        <a class="page-header__toggler" href="#"></a>
+        
       </div>
     </div>
   </div>
@@ -82,10 +85,13 @@
         <img src="img/features-phone-3.png" alt="iphone-1">
       </div>
       <div class="features__item">
-        <img src="img/features-phone-3.png" alt="iphone-2">
+        <img src="img/features-phone-3.png"
+             alt="iphone-2">
       </div>
       <div class="features__item">
-        <img src="img/features-phone-3.png" srcset="img/features-phone-3-md.png" alt="iphone-3">
+        <img src="img/features-phone-3-lg.png"
+             srcset="img/features-phone-3-sm.png 700w" 
+             alt="iphone-3">
       </div>
       <div class="features__item">
         <h3>Поднимает настроение</h3>
@@ -154,7 +160,7 @@
         
         
         <div class="reviews-slider__item">
-          <p>Это  перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
+          <p>Это перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
           <h3>Николай Петров</h3>
           <h4>25 лет, водитель трамвая</h4>
         </div>
@@ -277,5 +283,7 @@
 </section> price
  -->
   
+
+  <script src="js/app.js"></script>
 </body>
 </html>
