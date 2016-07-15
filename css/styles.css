@@ -22,6 +22,13 @@ body {
   font-weight: 300;
   color: #283645;
 }
+table td {
+  border: 1px solid #e5e5e5;
+  padding: 20px;
+  position: relative;
+  font-size: 14px;
+  font-weight: 400;
+}
 .container {
   width: 100%;
   padding: 0 20px;
@@ -375,7 +382,7 @@ body {
 }
 @media (min-width: 1200px) {
   .features:before {
-    top: 135px;
+    top: 150px;
     -webkit-transform: skewY(-3.5deg);
         -ms-transform: skewY(-3.5deg);
             transform: skewY(-3.5deg);
@@ -656,7 +663,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   position: absolute;
-  left: 300%;
+  left: 250%;
   width: 100%;
   font-size: 14px;
 }
@@ -712,6 +719,181 @@ body {
 .reviews-slider #slider-trigger-3:checked ~ .reviews-slider__items .reviews-slider__item:nth-child(3) {
   left: 0;
   transition: left .7s;
+}
+.price {
+  background: #f2f2f2;
+  min-height: 470px;
+  overflow: hidden;
+  position: relative;
+}
+.price__inner {
+  width: 100%;
+}
+@media (min-width: 700px) {
+  .price__inner {
+    max-width: 1020px;
+    padding: 0 40px;
+    margin: 0 auto;
+  }
+}
+.price-table {
+  min-height: 280px;
+  text-transform: uppercase;
+}
+.price-table input {
+  position: absolute;
+  opacity: 0;
+}
+.price-table__controls {
+  z-index: 201;
+  position: absolute;
+  left: 50%;
+  width: 100px;
+  margin-left: -50px;
+  bottom: 35px;
+}
+@media (min-width: 700px) {
+  .price-table__controls {
+    left: -100px;
+  }
+}
+.price-table__controls label {
+  display: inline-block;
+  cursor: pointer;
+  width: 12px;
+  height: 12px;
+  background: #bec2c7;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 3px solid #f2f2f2;
+  margin-right: 16px;
+}
+.price-table #price-trigger-1:checked ~ .price-table__controls label[for="price-trigger-1"],
+.price-table #price-trigger-2:checked ~ .price-table__controls label[for="price-trigger-2"],
+.price-table #price-trigger-3:checked ~ .price-table__controls label[for="price-trigger-3"] {
+  background: #fff;
+  border: 3px solid #283645;
+}
+.price-table #price-trigger-1:checked ~ .price-table__inner {
+  left: 5px;
+  transition: left .8s;
+}
+.price-table #price-trigger-2:checked ~ .price-table__inner {
+  left: -240px;
+  transition: left .8s;
+}
+.price-table #price-trigger-3:checked ~ .price-table__inner {
+  left: -525px;
+  transition: left .8s;
+}
+.price-table__inner {
+  padding-top: 90px;
+  padding-bottom: 100px;
+  position: absolute;
+  left: -260px;
+}
+@media (min-width: 700px) {
+  .price-table__inner {
+    padding-bottom: 70px;
+    position: static;
+  }
+}
+@media (min-width: 1200px) {
+  .price-table__inner {
+    padding-bottom: 100px;
+    padding-top: 150px;
+  }
+}
+.price-table__name {
+  font-size: 18px;
+  font-weight: 700;
+}
+@media (min-width: 700px) {
+  .price-table__name {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1200px) {
+  .price-table__name {
+    font-size: 18px;
+  }
+}
+.price-table__price {
+  font-size: 24px;
+  font-weight: 300;
+}
+@media (min-width: 700px) {
+  .price-table__price {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1200px) {
+  .price-table__price {
+    font-size: 24px;
+  }
+}
+.price-table__content {
+  width: 840px;
+  overflow: hidden;
+  background: #fff;
+}
+.price-table__content td {
+  width: 33.333333%;
+}
+.price-table__content td img {
+  position: absolute;
+  right: 7%;
+  top: 29%;
+}
+@media (min-width: 700px) {
+  .price-table__content {
+    width: 100%;
+  }
+  .price-table__content td {
+    width: 25%;
+  }
+  .price-table__content td img {
+    right: 40%;
+  }
+}
+.price-table__row-1 {
+  background: #283645;
+  color: #fff;
+  text-align: center;
+}
+.price-table__row-1 .price-table__col-1 {
+  background: #f2f2f2;
+  border: none;
+  border-top: 1px solid #f2f2f2;
+}
+.price-table__col-1 {
+  display: none;
+}
+@media (min-width: 700px) {
+  .price-table__col-1 {
+    display: table-cell;
+    text-transform: capitalize;
+  }
+}
+@media (min-width: 1200px) {
+  .price-table__col-1 {
+    font-size: 18px;
+  }
+}
+@media (min-width: 700px) {
+  .price-table__row-2 .price-table__col-2,
+  .price-table__row-3 .price-table__col-2,
+  .price-table__row-4 .price-table__col-2,
+  .price-table__row-2 .price-table__col-3,
+  .price-table__row-3 .price-table__col-3,
+  .price-table__row-4 .price-table__col-3,
+  .price-table__row-2 .price-table__col-4,
+  .price-table__row-3 .price-table__col-4,
+  .price-table__row-4 .price-table__col-4 {
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

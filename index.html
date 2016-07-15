@@ -172,110 +172,118 @@
   </div>
 </section>
 
-
-<!-- 
 <section class="price">
-  <div class="price__inner container">
-    <div class="price-table__table-wrap">
-      <table class="price-table__table">
-        <tr class="price-table__row-1">
-          <td class="price-table__col-1">
-          </td>
-          <td class="price-table__col-2">
-            <div class="price-table__buy">
-              <span class="price-table__name">База</span>
-              <span class="price-table__price">1,99 USD</span>
-            </div>
-          </td>
-          <td class="price-table__col-3">
-            <div class="price-table__buy">
-              <p class="price-table__ribbon"><span>ХИТ</span>
-              </p>
-              <span class="price-table__name">Стандарт</span>
-              <span class="price-table__price">3,99 USD</span>
-            </div>
-          </td>
-          <td class="price-table__col-4">
-            <div class="price-table__buy">
-              <span class="price-table__name">АНЛИМ</span>
-              <span class="price-table__price">9,99 USD</span>
-            </div>
-          </td>
-        </tr>
-        <tr class="price-table__row-2">
-          <td class="price-table__col-1">
-            <span class="package-option">Розовый фильтр</span>
-          </td>
-          <td class="price-table__col-2">
-            <div class="price-table__wrap">
-              <span class="package-option--320">Розовый фильтр</span>
-              <span class="icon  icon-yes">Есть</span>
-            </div>
-          </td>
-          <td class="price-table__col-3">
-            <div class="price-table__wrap">
-              <span class="package-option--320">Розовый фильтр</span>
-              <span class="icon  icon-yes">Есть</span>
-            </div>
-          </td>
-          <td class="price-table__col-4">
-            <div class="price-table__wrap">
-              <span class="package-option--320">Розовый фильтр</span>
-              <span class="icon  icon-yes">Есть</span>
-            </div>
-          </td>
-        </tr>
-        <tr class="price-table__row-3">
-          <td class="price-table__col-1">
-            <a class="package-option">Смайлики</a>
-          </td>
-          <td class="price-table__col-2">
-            <div class="price-table__wrap">
-              <span class="package-option--320">Смайлики</span>
-              <span class="icon  icon-no">Нет</span>
-            </div>
-          </td>
-          <td class="price-table__col-3">
-            <div class="price-table__wrap">
-              <span class="package-option--320">Смайлики</span>
-              <span class="icon  icon-yes">Есть</span>
-            </div>
-          </td>
-          <td class="price-table__col-4">
-            <div class="price-table__wrap">
-              <span class="package-option--320">Смайлики</span>
-              <span class="icon  icon-yes">Нет</span>
-            </div>
-          </td>
-        </tr>
-        <tr class="price-table__row-4">
-          <td class="price-table__col-1">
-            <a class="price-table-option">Комментарии</a>
-          </td>
-          <td class="price-table__col-2">
-            <div class="price-table__wrap">
-              <span class="package-option--320">Комментарии</span>
-              <span class="icon  icon-no">Нет</span>
-            </div>
-          </td>
-          <td class="price-table__col-3">
-            <div class="price-table__wrap">
-              <span class="package-option--320">Комментарии</span>
-              <span class="icon  icon-no">Нет</span>
-            </div>
-          </td>
-          <td class="price-table__col-4">
-            <div class="price-table__wrap">
-              <span class="package-option--320">Комментарии</span>
-              <span class="icon  icon-yes">Есть</span>
-            </div>
-          </td>
-        </tr>
-      </table>
-    </div> price_wrap
-  </div> price_inner
-</section> price
- -->
+  <div class="price__inner">
+    <div class="price-table">
+      <input type="radio" id="price-trigger-1" name="price-table" checked="checked">
+      <input type="radio" id="price-trigger-2" name="price-table">
+      <input type="radio" id="price-trigger-3" name="price-table">
+
+      <div class="price-table__controls">
+        <label for="price-trigger-1"></label>
+        <label for="price-trigger-2"></label>
+        <label for="price-trigger-3"></label>
+      </div>
+
+      <div class="price-table__inner">
+        <table class="price-table__content">
+          <tr class="price-table__row-1">
+            <td class="price-table__col-1"><br><br>
+            </td>
+            <td class="price-table__col-2">
+              <div class="price-table__header">
+                <span class="price-table__name">База<br></span>
+                <span class="price-table__price">1,99 USD</span>
+              </div>
+            </td>
+            <td class="price-table__col-3">
+              <div class="price-table__header">
+                <span class="price-table__name">Стандарт<br></span>
+                <span class="price-table__price">3,99 USD</span>
+              </div>
+            </td>
+            <td class="price-table__col-4">
+              <div class="price-table__header">
+                <span class="price-table__name">Анлим<br></span>
+                <span class="price-table__price">9,99 USD</span>
+              </div>
+            </td>
+          </tr>
+          <tr class="price-table__row-2">
+            <td class="price-table__col-1">
+              <span class="package-option">Розовый фильтр</span>
+            </td>
+            <td class="price-table__col-2">
+              <div class="price-table__wrap">
+                <span class="package-option--320">Розовый фильтр</span>
+                <img src="img/yes.svg" alt="yes">
+              </div>
+            </td>
+            <td class="price-table__col-3">
+              <div class="price-table__wrap">
+                <span class="package-option--320">Розовый фильтр</span>
+                <img src="img/yes.svg" alt="yes">
+              </div>
+            </td>
+            <td class="price-table__col-4">
+              <div class="price-table__wrap">
+                <span class="package-option--320">Розовый фильтр</span>
+                <img src="img/yes.svg" alt="yes">
+              </div>
+            </td>
+          </tr>
+          <tr class="price-table__row-3">
+            <td class="price-table__col-1">
+              <a class="package-option">Смайлики</a>
+            </td>
+            <td class="price-table__col-2">
+              <div class="price-table__wrap">
+                <span class="package-option--320">Смайлики</span>
+                <img src="img/no.svg" alt="no">
+              </div>
+            </td>
+            <td class="price-table__col-3">
+              <div class="price-table__wrap">
+                <span class="package-option--320">Смайлики</span>
+                <img src="img/yes.svg" alt="yes">
+              </div>
+            </td>
+            <td class="price-table__col-4">
+              <div class="price-table__wrap">
+                <span class="package-option--320">Смайлики</span>
+                <img src="img/yes.svg" alt="yes">
+              </div>
+            </td>
+          </tr>
+          <tr class="price-table__row-4">
+            <td class="price-table__col-1">
+              <a class="price-table-option">Комментарии</a>
+            </td>
+            <td class="price-table__col-2">
+              <div class="price-table__wrap">
+                <span class="package-option--320">Комментарии</span>
+                <img src="img/no.svg" alt="no">
+              </div>
+            </td>
+            <td class="price-table__col-3">
+              <div class="price-table__wrap">
+                <span class="package-option--320">Комментарии</span>
+                <img src="img/no.svg" alt="no">
+              </div>
+            </td>
+            <td class="price-table__col-4">
+              <div class="price-table__wrap">
+                <span class="package-option--320">Комментарии</span>
+                <img src="img/yes.svg" alt="yes">
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div> 
+  </div> 
+</section> 
+
   
 
   <script src="js/app.js"></script>
