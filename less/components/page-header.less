@@ -13,7 +13,7 @@
   }
 
   @media(min-width: @md) {
-    background: @darker-blue url("../img/background-2x.jpg") top center no-repeat;
+    background: @darker-blue url("../img/header-bg-lg.jpg") top center no-repeat;
     background-size: cover;
   }
 
@@ -42,6 +42,14 @@
     height: 24px;
     background: url(../img/main-nav-menu-toggle.png) no-repeat;
     cursor: pointer;
+
+    &:hover {
+      fill: #d22856;
+    }
+
+    &:active {
+      fill: #6f3650;
+    }
     
 
     @media (min-width: @sm) {
@@ -57,7 +65,44 @@
   &__logo-link {
     width: 74px;
     height: 23px;
-    background: url("../img/header-logo-1.png") no-repeat;
+    background: url("../img/header-logo-1.svg");
+
+    &:hover {
+      background: url("../img/header-logo-1-hover.svg");
+    }
+
+    &:active {
+      background: url("../img/header-logo-1-active.svg");
+    }
+
+    @media (min-width: @sm) {
+      background: url("../img/header-logo-2.png");
+      width: 145px;
+      height: 40px;
+      margin-bottom: 12px;
+
+      &:hover {
+        background: url("../img/header-logo-2-hover.png");
+      }
+
+      &:active {
+        background: url("../img/header-logo-2-active.png");
+      }
+    }
+
+    @media (min-width: @md) {
+      background: url("../img/header-logo-3.png");
+      width: 146px;
+      height: 40px;
+
+      &:hover {
+        background: url("../img/header-logo-2-hover.png") no-repeat;
+      }
+
+      &:active {
+        background: url("../img/header-logo-2-active.png") no-repeat;
+      }
+    }
   }
 
   .promo {
@@ -76,18 +121,18 @@
       align-items: flex-start;
       justify-content: center;
       flex-wrap: wrap;
-      background: url(../img/download-hand-sm.png) 70% 100% no-repeat;
+      background: url("../img/download-hand-sm.png") 70% 100% no-repeat;
       
     }
 
     @media (min-width: @md) {
-      background: url(../img/download-hand-md.png) 70% 100% no-repeat;
+      background: url("../img/download-hand-md.png") 70% 100% no-repeat;
     }
 
     &__hand {
       width: 320px;
       height: 285px;
-      background: url(../img/download-hand-xs.png) no-repeat;
+      background: url("../img/download-hand-xs.png") no-repeat;
 
       @media (min-width: @sm) {
         order: 2;
@@ -118,7 +163,7 @@
 
     .download { 
       // width: 100%;
-      z-index: 100;
+      z-index: 5;
       padding-top: 30px;
       text-align: center;
       min-height: 271px;
@@ -135,7 +180,7 @@
         width: 100%;
         margin-top: 20px;
         display: flex;
-        align-items: center;
+        align-items: flex-end;
         justify-content: center;
         
         &--item {
@@ -151,6 +196,15 @@
       .btn {
         display: block;
         text-align: center;
+
+        &:hover {
+          background: #fff;
+          color: @pink;
+        }
+
+        &:active {
+          color: @light-pink;
+        }
 
         @media (min-width: @sm) {
           font-size: 21px;
@@ -224,6 +278,17 @@
           color: #fff;
           font-weight: 400;
           text-decoration: none;
+          padding-top: 10px;
+          padding-bottom: 10px;
+
+          &:hover {
+            border-bottom: 2px solid #fff;
+          }
+
+          &:active {
+            color: #82888e;
+            border-bottom: none;
+          }
         }
       }
     }
@@ -269,6 +334,17 @@
       a {
         text-decoration: none;
         color: #fff;
+        font-weight: 700;
+        font-size: 18px;
+        text-transform: uppercase;
+
+        &:hover {
+          color: #d22856;
+        }
+
+        &:active {
+          color: #6f3650;
+        }
       }
     }
   }

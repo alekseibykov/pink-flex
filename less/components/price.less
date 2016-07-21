@@ -4,6 +4,26 @@
   overflow: hidden;
   position: relative;
 
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 140px;
+    background: #fff;
+    top: -120px;
+    left: 0;
+    z-index: 201;
+    transform: skewY(-3deg);
+
+    @media (min-width: @sm) {
+      top: -110px;
+    }
+
+    @media (min-width: @md) {
+      top: -80px;
+    }
+  }
+
   &__inner {
     width: 100%;
 
@@ -46,6 +66,14 @@
       vertical-align: middle;
       border: 3px solid @grey;
       margin-right: 16px;
+
+      &:hover {
+        background: #7e868f;
+      }
+
+      &:active {
+        background: #e9ebec;
+      }
     }
   }
 
@@ -160,6 +188,25 @@
       background: @grey;
       border: none;
       border-top: 1px solid @grey;
+    }
+
+    .price-table__col-3 {
+      position: relative;
+      overflow: hidden;
+
+      &::before {
+        position: absolute;
+        content: "ХИТ";
+        left: -30px;
+        top: 10px;
+        font-size: 14px;
+        transform: rotate(-45deg);
+        background: #d22856;
+        width: 110px;
+        height: 32px;
+        padding-top: 4px;
+        font-weight: 600;
+      }
     }
   }
 
